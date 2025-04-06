@@ -1,7 +1,7 @@
 import os
 import requests
 
-def enable_vpn(proxy_host="", proxy_port=""):
+def enable_vpn(proxy_host="72.205.0.67", proxy_port="4145"):
     os.environ["HTTP_PROXY"] = f"socks5h://{proxy_host}:{proxy_port}"
     os.environ["HTTPS_PROXY"] = f"socks5h://{proxy_host}:{proxy_port}"
 
