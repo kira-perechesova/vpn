@@ -1,7 +1,7 @@
 import os
 import requests
 
-def enable_vpn(proxy_host="72.205.0.67", proxy_port="4145"):
+def enable_vpn(proxy_host="77.43.230.22", proxy_port="7788"):
     os.environ["HTTP_PROXY"] = f"socks5h://{proxy_host}:{proxy_port}"
     os.environ["HTTPS_PROXY"] = f"socks5h://{proxy_host}:{proxy_port}"
 
@@ -10,7 +10,7 @@ def disable_vpn():
     os.environ.pop("HTTPS_PROXY", None)
 
 def send_request():
-    response = requests.get("https://httpbin.org/ip", timeout=10)
+    response = requests.get("https://httpbin.org/ip", timeout=30)
     print(response.json())
 
 send_request()
